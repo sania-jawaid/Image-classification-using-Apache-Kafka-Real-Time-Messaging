@@ -11,18 +11,21 @@ The notebook can be accessed with the name 'Mnist Dataset Model training.ipynb' 
 3) Built a multi-class image classifier on the Cifar10 dataset using a Convolutional Neural Network (CNN) based model. 
 The notebook can be accessed with the name 'Cifar Dataset Model training.ipynb' (Model saved as 'cifar-model.h5')
 Other Datasets can be included with minor modifications if required.
+
 NOTE: Getting High Accuracy was not a the main objective of this task.
 
-## Part 
+## Part 2
 1) Build a unified API in python to send and receive messages to / from Apache Kafka
 2) The inputs to the function and the outputs should be as unified as possible.
-Setup Kakfa on local machine using this link: https://kafka.apache.org/quickstart
+3) Setup Kakfa on local machine using this link: https://kafka.apache.org/quickstart
+
 NOTE: Need to make some changes to the configuration to be able to send images over the messaging service.
 ### You need to override the following properties:
 
 Broker Configs($KAFKA_HOME/config/server.properties)
 
 `message.max.bytes=15728640`
+
 `replica.fetch.max.bytes=15728640`
 
 Consumer Configs($KAFKA_HOME/config/consumer.properties)
