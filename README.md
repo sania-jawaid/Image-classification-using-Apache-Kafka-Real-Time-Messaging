@@ -43,3 +43,7 @@ machine learning service.
 requests asynchronously.
 3) Note that this is not a REST API based system but rather one which can process requests in a non-blocking way and (theoretically) put the
 results somewhere else (like a database). Y Here it is mocked this by printing to the console.
+
+For running and using the Machine Learning Service through the Message Broker Application, please do the following things:
+1) After starting kafka and zookeeper services, start another terminal and launch the service `python consumer.py` from command line. This will be a receiving end of the messages you send via the production service.
+2) Then start another terminal and launch the service `python producer.py`. This will be sending images to the consumer service which will classify these images on its end and print it to the console.
