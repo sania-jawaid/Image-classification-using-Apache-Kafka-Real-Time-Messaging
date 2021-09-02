@@ -105,7 +105,7 @@ def convert_to_grayscale(images):
 
 def main():
     print("Producing msgs!")	
-    option = 3
+    option = 1
     if option == 1:
         #load Fashion Mnist Data
         topic = "fashion"
