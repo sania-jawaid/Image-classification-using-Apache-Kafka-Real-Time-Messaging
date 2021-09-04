@@ -5,11 +5,11 @@
 
 ## Part 1:
 Neural Network
-1) Built a multi-class image classifier on the fashion MNIST dataset using a Convolutional Neural Network (CNN) based model. 
+1) Built a multi-class image classifier on the fashion MNIST dataset using a Neural Network (CNN) based model. 
 The notebook can be accessed with the name 'Fashion Mnist Dataset Model training.ipynb' (Model saved as 'final.h5')
-2) Built a multi-class image classifier on the MNIST dataset using a Convolutional Neural Network (CNN) based model. 
+2) Built a multi-class image classifier on the MNIST dataset using a Neural Network (CNN) based model. 
 The notebook can be accessed with the name 'Mnist Dataset Model training.ipynb' (Model saved as 'mnist-model.h5')
-3) Built a multi-class image classifier on the Cifar10 dataset using a Convolutional Neural Network (CNN) based model. 
+3) Built a multi-class image classifier on the Cifar10 dataset using a Neural Network (CNN) based model. 
 The notebook can be accessed with the name 'Cifar Dataset Model training.ipynb' (Model saved as 'cifar-model.h5')
 Other Datasets can be included with minor modifications if required.
 
