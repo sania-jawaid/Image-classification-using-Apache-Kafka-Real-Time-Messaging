@@ -13,7 +13,7 @@ from keras.models import load_model
 size = 1000000
 
 # Lambda function to represent memory in Mb
-get_size = lambda x: asizeof(x) / 10 ** 6
+get_size = lambda x: asizeof(x) / (1024*1024)
 
 # Sample array - Represents a HD Image , 3 Channels , 256 bit
 np_arr = np.random.randint(0, 256, (1920, 1080, 3), dtype=np.uint8)
@@ -35,7 +35,6 @@ def get_model(topic):
         model = load_model('mnist-model.h5')
    elif topic == "topic_cifar":
         model = load_model('cifar-model.h5')
-   probability_model = tf.keras.Sequential([model, tf.keras.layers.Softmax()])
    return model
 
 consumer1 = KafkaConsumer(bootstrap_servers='localhost:9092')
@@ -53,7 +52,8 @@ def kafka_python_consumer1():
       im = receive_and_decode_bytes_to_numpy_array(msg)
       print('Reloaded Image Size: {} Mb'.format(get_size(im)))
       print(im.shape)
-      prediction = model.predict(np.array([im]),  verbose=2)
+      image = im.reshape(1, 28, 28, 1)
+      prediction = model.predict(image,  verbose=2)
       print("Results:")
       print("Prediction:", np.argmax(prediction), "Actual:", label)
 
